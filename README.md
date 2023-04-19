@@ -1,4 +1,5 @@
 # Pegasus-transfer
- Учусь правильно делать разметку и её стилизовать
+ Это одностроничный сайт компании, предоставляющий услуги транфера.
 
-## Ссылка https://lavrrusha.github.io/Pegasus-transfer/
+## Ссылка для демонстрации проекта
+https://lavrrusha.github.io/Pegasus-transfer/
