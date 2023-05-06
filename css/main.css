@@ -190,7 +190,12 @@ body {
 }
 
 .header__tel {
-
+font-weight: 700;
+font-size: 18px;
+line-height: 1.1;
+text-align: center;
+color: #ffffff;
+display: block;
 }
 
 
