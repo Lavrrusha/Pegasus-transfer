@@ -142,14 +142,9 @@ body {
   min-height: 100vh;
 }
 
-/* временно  */
-body {
-  background-color: rgb(169, 174, 179);
-}
-
 /* Шапка */
 .header {
-  padding: 20px 0;
+  padding: 20px 0 12px;
 }
 
 .site-header {
@@ -217,6 +212,7 @@ body {
 .header__button {
   background-color: transparent;
   color: #FCC53B;
+  min-width: 300px;
 }
 
 .features {
@@ -251,8 +247,13 @@ body {
 }
 
 .features__name {
-  text-align: center;
-  line-height: 1.3%;
+  margin: 0;
+}
+
+.features-title {
+  min-width: 735px;
+  margin: 0 auto;
+  margin-bottom: 32px;
 }
 
 .features__text {
@@ -333,10 +334,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.social__item {
-  /* display: inline-block; */
-  /* margin-right: 16px; */
-}
 
 .footer__column {
   display: inline-block;
@@ -348,8 +345,6 @@ body {
 }
 
 /* меню */
-
-.main-navigation {}
 
 .main-navigation__list {
   list-style: none;
@@ -379,4 +374,114 @@ body {
 
 .main-navigation__item:last-of-type .main-navigation__link {
   text-align: right;
+}
+
+.travel-mode {
+  padding: 60px 0 100px;
+}
+
+.travel-mode__subtitle {
+  text-align: center;
+  max-width: max-content;
+  margin: 0 auto;
+  margin-bottom: 35 px;
+}
+
+.travel-mode__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* карточка поездки */
+
+.travel-card {
+  background-color: #ffffff;
+  color: #464045;
+}
+
+.travel-card__wrapper {
+  padding: 32px;
+  margin-bottom: 55px;
+  text-align: center;
+  border: 1px solid #464045;
+  border-top: 0;
+  border-color: #464045;
+}
+
+.travel-card__title {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.3;
+  text-align: center;
+  color: #4F4F4F;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.travel-mode__title {
+  margin-bottom: 12px;
+}
+
+.travel-card__details {
+  margin: 0;
+  display: block;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  color: #4F4F4F;
+  margin-bottom: 16px;
+}
+
+.travel-card__mode {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1px;
+  position: relative;
+}
+
+.travel-card__button {
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.travel-card__mode th {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+  color: #4F4F4F;
+  width: 50%;
+}
+
+.travel-card__mode td {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.6;
+  text-align: center;
+  color: #547dff;
+}
+
+/* вот как ты вообще понял, что тут надо так сделать */
+
+.travel-card__mode::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(70, 64, 69, 0.3);
+  top: 0;
+  bottom: 0;
+}
+
+.travel-card__photo {
+  display: block;
 }

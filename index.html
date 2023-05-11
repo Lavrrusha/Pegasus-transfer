@@ -6,6 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Пегас-Трансфёр</title>
+  <meta name="description" content="Сайт компании Пегас Трансфер: совместные поездки из Краснодара в Пятигорск и обратно">
+  <meta name="keywords" content="">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +32,7 @@
     <header class="header">
       <div class="wrapper">
         <a class="header__logotype logotype">
-          <img class="logotype__image" src="./img/image.svg" alt="image" width="175" loading="lazy">
+          <img class="logotype__image" src="./img/logotype.svg" alt="lodotype" width="175" loading="lazy">
           <span class="logotype__description">Комфортабельный трансфер Краснодар-Пятигорск</span>
         </a>
 
@@ -138,49 +147,53 @@
     </section>
 
     <section class="travel-mode">
-      <h2 class="travel-mode__title title">Расписание поездок</h2>
+      <div class="wrapper">
+        <h2 class="travel-mode__title title">Расписание поездок</h2>
 
-      <p class="travel-mode__subtitle">Две поездки осуществляются <b>ежедневно!</b></p>
+        <p class="travel-mode__subtitle">Две поездки осуществляются <b>ежедневно!</b></p>
 
-      <ul class="travel-mode__list">
-        <li class="travel-mode__item travel-card">
-          <h3 class="travel-card__title">Пятигорск - Краснодар</h3>
-          <img class="travel-card__photo" src="./img/photo-1.jpg" alt="photo-1" width="640" loading="lazy">
-          <p class="travel-card__details">Место <b>отправления:</b></p>
-          <p>Макдоналдс(проспект Калинина, 2)</p>
-          <table class="travel-card__mode">
-            <tr>
-              <th>Отправление</th>
-              <th>Прибытие</th>
-            </tr>
-            <tr>
-              <td>07:00</td>
-              <td>13:00</td>
-            </tr>
-          </table>
-          <a href="#" class="travel-card__button button">Узнать подробности</a>
-        </li>
+        <ul class="travel-mode__list">
+          <li class="travel-mode__item travel-card">
+            <img class="travel-card__photo" src="./img/photo-1.jpg" alt="photo-1" width="640" loading="lazy">
+            <div class="travel-card_wrapper">
+              <h3 class="travel-card__title">Пятигорск - Краснодар</h3>
+              <p class="travel-card__details">Место <b>отправления:</b><br>Макдоналдс(проспект Калинина, 2)</p>
+              <table class="travel-card__mode">
+                <tr>
+                  <th>Отправление</th>
+                  <th>Прибытие</th>
+                </tr>
+                <tr>
+                  <td>07:00</td>
+                  <td>13:00</td>
+                </tr>
+              </table>
+              <a href="#" class="travel-card__button button">Узнать подробности</a>
+            </div>
+          </li>
 
-        <li class="travel-mode__item travel-card">
-          <h3 class="travel-card__title">Краснодар - Пятигорск</h3>
-          <img class="travel-card__photo" src="./img/photo-2.jpg" alt="photo-2" width="640" loading="lazy">
-          <p class="travel-card__details">Место <b>отправления:</b></p>
-          <p>ЖД вокзал Краснодар-1 (Привокзальная площадь)</p>
-          <table class="travel-card__mode">
-            <tr>
-              <th>Отправление</th>
-              <th>Прибытие</th>
-            </tr>
-            <tr>
-              <td>15:00</td>
-              <td>21:00</td>
-            </tr>
-          </table>
-          <a href="#" class="travel-card__button button">Узнать подробности</a>
-        </li>
+          <li class="travel-mode__item travel-card">
+            <img class="travel-card__photo" src="./img/photo-2.jpg" alt="photo-2" width="640" loading="lazy">
+            <div class="travel-card_wrapper">
+              <h3 class="travel-card__title">Краснодар - Пятигорск</h3>
+              <p class="travel-card__details">Место <b>отправления:</b><br>ЖД вокзал Краснодар-1 (Привокзальная площадь)
+              </p>
+              <table class="travel-card__mode">
+                <tr>
+                  <th>Отправление</th>
+                  <th>Прибытие</th>
+                </tr>
+                <tr>
+                  <td>15:00</td>
+                  <td>21:00</td>
+                </tr>
+              </table>
+              <a href="#" class="travel-card__button button">Узнать подробности</a>
+            </div>
+          </li>
 
-      </ul>
-
+        </ul>
+      </div>
     </section>
 
     <section class="features">
