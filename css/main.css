@@ -81,6 +81,7 @@ body {
 .button:focus {
   background-color: #ffb600;
   border-color: #ffb600;
+  color: #464045;
 }
 
 .button:active {
@@ -100,6 +101,8 @@ body {
 .first-screen {
   background-color: #331612;
   background-image: url(../img/bg-first-screen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
   min-height: 100vh;
   width: 100vw;
@@ -222,12 +225,13 @@ body {
 
 .features-title {
   font-size: 48px;
-  line-height: 53px;
-  line-height: 1.1%;
+  line-height: 1.1;
   margin-bottom: 32px;
   margin: 0;
   padding: 0;
+  margin: 0 auto;
   margin-bottom: 32px;
+  max-width: 734px;
 }
 
 .features__list {
@@ -250,12 +254,6 @@ body {
   margin: 0;
 }
 
-.features-title {
-  min-width: 735px;
-  margin: 0 auto;
-  margin-bottom: 32px;
-}
-
 .features__text {
   margin: 0;
   width: 370px;
@@ -275,7 +273,7 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+/*
 .jobs__wrapper {
   background-color: #ffffff;
   width: 615px;
@@ -283,7 +281,7 @@ body {
   margin-right: 307px;
   padding-top: 50px;
   padding-bottom: 60px;
-}
+} */
 
 .jobs__title {
   font-size: 34px;
@@ -299,8 +297,9 @@ body {
 
 .jobs__list {
   margin: 0;
+  padding: 0;
+  list-style: none;
   margin-bottom: 32px;
-  padding: 100px;
 }
 
 .jobs__button {
@@ -384,7 +383,8 @@ body {
   text-align: center;
   max-width: max-content;
   margin: 0 auto;
-  margin-bottom: 35 px;
+  margin-bottom: 40px;
+  letter-spacing: 0.13em;
 }
 
 .travel-mode__list {
@@ -404,7 +404,7 @@ body {
 }
 
 .travel-card__wrapper {
-  padding: 32px;
+  padding: 32px 20px 50px;
   margin-bottom: 55px;
   text-align: center;
   border: 1px solid #464045;
@@ -413,7 +413,7 @@ body {
 }
 
 .travel-card__title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 34px;
   line-height: 1.3;
   text-align: center;
@@ -434,14 +434,15 @@ body {
   line-height: 1.6;
   text-align: center;
   color: #4F4F4F;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+
 }
 
 .travel-card__mode {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 1px;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -463,7 +464,7 @@ body {
 .travel-card__mode td {
   font-weight: 700;
   font-size: 34px;
-  line-height: 1.6;
+  line-height: 1.3;
   text-align: center;
   color: #547dff;
 }
@@ -477,11 +478,191 @@ body {
   left: 50%;
   height: 100%;
   width: 1px;
-  background-color: rgba(70, 64, 69, 0.3);
+  background-color: #464045;
+  opacity: 0.3;
   top: 0;
   bottom: 0;
 }
 
 .travel-card__photo {
+  display: block;
+}
+
+/* слайдер авто  */
+.slider-cars__item {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.slider-cars__title {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #464045;
+  margin: 0;
+  margin-bottom: 24px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #FCC53B;
+  max-width: max-content;
+}
+
+.slider-cars__text {
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.slider-cars__text p {
+  margin: 17px 0;
+}
+
+.slider-cars__text:last-child p {
+  margin-bottom: 0;
+}
+
+.slider__buttons-wrapper {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: auto;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slider-cars__image {
+  display: block;
+  width: 100%;
+}
+
+.slider__button {
+  width: 80px;
+  height: 80px;
+  border: none;
+  background: #FFB734;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: initial;
+}
+
+.slider__button-icon {
+  pointer-events: none;
+}
+
+.slider-cars__header {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 8fr 2fr 2fr;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 34px;
+
+
+}
+
+.slider__view {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.3;
+  letter-spacing: 0.13em;
+  text-transform: lowercase;
+  color: #464045;
+  position: initial;
+}
+
+.slider__title {
+  margin-right: auto;
+}
+
+.slider--cars {
+  padding: 32px 0 114px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+.slider__list {
+  padding: 0;
+}
+
+.faq__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordeon__question {
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 80px;
+  align-items: center;
+}
+
+.accordeon__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0;
+  color: #464045;
+  padding-left: 25px;
+}
+
+.accordeon__icon {
+  pointer-events: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordeon__icon svg {
+  transition: all 0.3s;
+}
+
+.accordeon__answer {
+  max-width: 1086px;
+  margin: 0 auto;
+  padding: 32px 0;
+  display: none;
+}
+
+.jobs__details {
+  background-color: #fff;
+  padding: 50px 42px 60px;
+  max-width: 616px;
+  margin: 0;
+  margin-left: auto;
+}
+
+
+
+.accordeon {
+
+}
+
+.accordeon.active  .accordeon__icon svg {
+  transform: rotate(180deg);
+}
+
+.accordeon.active .accordeon__question {
+  background: #FFB734;
+}
+.accordeon.active .accordeon__answer {
   display: block;
 }

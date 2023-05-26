@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Пегас-Трансфёр</title>
-  <meta name="description" content="Сайт компании Пегас Трансфер: совместные поездки из Краснодара в Пятигорск и обратно">
+  <meta name="description"
+    content="Сайт компании Пегас Трансфер: совместные поездки из Краснодара в Пятигорск и обратно">
   <meta name="keywords" content="">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -21,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -32,7 +33,7 @@
     <header class="header">
       <div class="wrapper">
         <a class="header__logotype logotype">
-          <img class="logotype__image" src="./img/logotype.svg" alt="lodotype" width="175" loading="lazy">
+          <img class="logotype__image" src="./img/logotype.svg" alt="logotype" width="175" loading="lazy">
           <span class="logotype__description">Комфортабельный трансфер Краснодар-Пятигорск</span>
         </a>
 
@@ -155,7 +156,7 @@
         <ul class="travel-mode__list">
           <li class="travel-mode__item travel-card">
             <img class="travel-card__photo" src="./img/photo-1.jpg" alt="photo-1" width="640" loading="lazy">
-            <div class="travel-card_wrapper">
+            <div class="travel-card__wrapper">
               <h3 class="travel-card__title">Пятигорск - Краснодар</h3>
               <p class="travel-card__details">Место <b>отправления:</b><br>Макдоналдс(проспект Калинина, 2)</p>
               <table class="travel-card__mode">
@@ -174,7 +175,7 @@
 
           <li class="travel-mode__item travel-card">
             <img class="travel-card__photo" src="./img/photo-2.jpg" alt="photo-2" width="640" loading="lazy">
-            <div class="travel-card_wrapper">
+            <div class="travel-card__wrapper">
               <h3 class="travel-card__title">Краснодар - Пятигорск</h3>
               <p class="travel-card__details">Место <b>отправления:</b><br>ЖД вокзал Краснодар-1 (Привокзальная площадь)
               </p>
@@ -243,200 +244,265 @@
     </section>
 
     <section class="slider slider--cars slider-cars">
+      <div class="wrapper">
+        <div class="slider-cars__header">
+          <h2 class="slider__title title">Наши автомобили</h2>
 
-      <h2 class="slider__title title">Наши автомобили</h2>
-      <span class="slider__view">1 из 7</span>
+          <!-- пагинация  -->
+          <span class="slider__view swiper-pagination">1 из 7</span>
 
-      <button class="slider__button" type="button">
-        <svg class="slider__button-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="34" fill="none">
-          <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m19.5 2-17 15 17 15" />
-        </svg>
-      </button>
-      <button class="slider__button" type="button">
-        <svg class="slider__button-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="34" fill="none">
-          <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 2 17 15-17 15" />
-        </svg>
-      </button>
-
-      <ul class="slider__list">
-
-        <li class="slider__item slider-cars__item">
-          <img class="slider-cars__image" src="./img/car-1.jpg" alt="car-1" width="640" loading="lazy">
-          <h3 class="slider-cars__title">Hyundai H-1</h3>
-          <div class="slider-cars__text">
-            <p>Высокий уровень безопасности обеспечивается современными технологиями – ESP следит
-              за курсовой
-              устойчивостью, а другие ассистенты помогают в процессе движения на средней скорости.</p>
-            <p>Радиус поворота этого транспорта составляет 5.6 метров, что даёт возможность легко
-              разворачиваться на
-              узкой улице.</p>
-            <p>Для задних и передних колёс установлены большие и мощные дисковые тормоза, которые
-              обеспечивают
-              стабильное снижение скорости.</p>
-            <p>Салон радует вместительностью – для посадки доступно 8 мягких и удобных мест.</p>
+          <div class="slider__buttons-wrapper">
+            <button class="slider__button swiper-button-prev" type="button">
+              <svg class="slider__button-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="34" fill="none">
+                <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m19.5 2-17 15 17 15" />
+              </svg>
+            </button>
+            <button class="slider__button swiper-button-next" type="button">
+              <svg class="slider__button-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="34" fill="none">
+                <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 2 17 15-17 15" />
+              </svg>
+            </button>
           </div>
-        </li>
-      </ul>
+        </div>
 
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <ul class="swiper-wrapper slider__list">
+
+            <li class="swiper-slide slider__item slider-cars__item">
+              <img class="slider-cars__image" src="./img/car-1.jpg" alt="car-1" width="640" loading="lazy">
+              <div class="slider__details">
+                <h3 class="slider-cars__title">Hyundai H-1</h3>
+                <div class="slider-cars__text">
+                  <p>Высокий уровень безопасности обеспечивается современными технологиями – ESP следит
+                    за курсовой
+                    устойчивостью, а другие ассистенты помогают в процессе движения на средней скорости.</p>
+                  <p>Радиус поворота этого транспорта составляет 5.6 метров, что даёт возможность легко
+                    разворачиваться на
+                    узкой улице.</p>
+                  <p>Для задних и передних колёс установлены большие и мощные дисковые тормоза, которые
+                    обеспечивают
+                    стабильное снижение скорости.</p>
+                  <p>Салон радует вместительностью – для посадки доступно 8 мягких и удобных мест.</p>
+                </div>
+              </div>
+
+            </li>
+            <li class="swiper-slide slider__item slider-cars__item">
+              <img class="slider-cars__image" src="./img/car-1.jpg" alt="car-1" width="640" loading="lazy">
+              <div class="slider__details">
+                <h3 class="slider-cars__title">Hyundai H-1</h3>
+                <div class="slider-cars__text">
+                  <p>Высокий уровень безопасности обеспечивается современными технологиями – ESP следит
+                    за курсовой
+                    устойчивостью, а другие ассистенты помогают в процессе движения на средней скорости.</p>
+                  <p>Радиус поворота этого транспорта составляет 5.6 метров, что даёт возможность легко
+                    разворачиваться на
+                    узкой улице.</p>
+                  <p>Для задних и передних колёс установлены большие и мощные дисковые тормоза, которые
+                    обеспечивают
+                    стабильное снижение скорости.</p>
+                  <p>Салон радует вместительностью – для посадки доступно 8 мягких и удобных мест.</p>
+                </div>
+              </div>
+
+            </li>
+            <li class="swiper-slide slider__item slider-cars__item">
+              <img class="slider-cars__image" src="./img/car-1.jpg" alt="car-1" width="640" loading="lazy">
+              <div class="slider__details">
+                <h3 class="slider-cars__title">Hyundai H-1</h3>
+                <div class="slider-cars__text">
+                  <p>Высокий уровень безопасности обеспечивается современными технологиями – ESP следит
+                    за курсовой
+                    устойчивостью, а другие ассистенты помогают в процессе движения на средней скорости.</p>
+                  <p>Радиус поворота этого транспорта составляет 5.6 метров, что даёт возможность легко
+                    разворачиваться на
+                    узкой улице.</p>
+                  <p>Для задних и передних колёс установлены большие и мощные дисковые тормоза, которые
+                    обеспечивают
+                    стабильное снижение скорости.</p>
+                  <p>Салон радует вместительностью – для посадки доступно 8 мягких и удобных мест.</p>
+                </div>
+              </div>
+
+            </li>
+            <li class="swiper-slide slider__item slider-cars__item">
+              <img class="slider-cars__image" src="./img/car-1.jpg" alt="car-1" width="640" loading="lazy">
+              <div class="slider__details">
+                <h3 class="slider-cars__title">Hyundai H-1</h3>
+                <div class="slider-cars__text">
+                  <p>Высокий уровень безопасности обеспечивается современными технологиями – ESP следит
+                    за курсовой
+                    устойчивостью, а другие ассистенты помогают в процессе движения на средней скорости.</p>
+                  <p>Радиус поворота этого транспорта составляет 5.6 метров, что даёт возможность легко
+                    разворачиваться на
+                    узкой улице.</p>
+                  <p>Для задних и передних колёс установлены большие и мощные дисковые тормоза, которые
+                    обеспечивают
+                    стабильное снижение скорости.</p>
+                  <p>Салон радует вместительностью – для посадки доступно 8 мягких и удобных мест.</p>
+                </div>
+              </div>
+
+            </li>
+            <li class="swiper-slide slider__item slider-cars__item">
+              <img class="slider-cars__image" src="./img/car-1.jpg" alt="car-1" width="640" loading="lazy">
+              <div class="slider__details">
+                <h3 class="slider-cars__title">Hyundai H-1</h3>
+                <div class="slider-cars__text">
+                  <p>Высокий уровень безопасности обеспечивается современными технологиями – ESP следит
+                    за курсовой
+                    устойчивостью, а другие ассистенты помогают в процессе движения на средней скорости.</p>
+                  <p>Радиус поворота этого транспорта составляет 5.6 метров, что даёт возможность легко
+                    разворачиваться на
+                    узкой улице.</p>
+                  <p>Для задних и передних колёс установлены большие и мощные дисковые тормоза, которые
+                    обеспечивают
+                    стабильное снижение скорости.</p>
+                  <p>Салон радует вместительностью – для посадки доступно 8 мягких и удобных мест.</p>
+                </div>
+              </div>
+
+            </li>
+            <li class="swiper-slide slider__item slider-cars__item">
+              <img class="slider-cars__image" src="./img/car-1.jpg" alt="car-1" width="640" loading="lazy">
+              <div class="slider__details">
+                <h3 class="slider-cars__title">Hyundai H-1</h3>
+                <div class="slider-cars__text">
+                  <p>Высокий уровень безопасности обеспечивается современными технологиями – ESP следит
+                    за курсовой
+                    устойчивостью, а другие ассистенты помогают в процессе движения на средней скорости.</p>
+                  <p>Радиус поворота этого транспорта составляет 5.6 метров, что даёт возможность легко
+                    разворачиваться на
+                    узкой улице.</p>
+                  <p>Для задних и передних колёс установлены большие и мощные дисковые тормоза, которые
+                    обеспечивают
+                    стабильное снижение скорости.</p>
+                  <p>Салон радует вместительностью – для посадки доступно 8 мягких и удобных мест.</p>
+                </div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
     </section>
 
     <section class="jobs">
-      <div class="wrapper jobs__wrapper">
-        <h2 class="jobs__title title">Приглашаем опытных водителей на работу</h2>
-        <p class="jobs__subtitle">Требования к водителям:</p>
-        <ol class="jobs__list">
-          <li>Наличие автомобиля Lada Largus, либо любой другой автомобиль с посадочными местами для пассажиров от
-            пяти и более.</li>
-          <li>Отличное состояние автомобиля.</li>
-          <li>Опыт вождения от 3х лет. Прописка в г.</li>
-          <li>Краснодар или в городах КМВ.</li>
-          <li>Гарантируем высокую заработную плату, при условии усердия и профессионализма с вашей стороны.</li>
-        </ol>
+      <div class="wrapper">
+        <div class="jobs__details">
+          <h2 class="jobs__title title">Приглашаем опытных водителей на работу</h2>
+          <p class="jobs__subtitle">Требования к водителям:</p>
+          <ol class="jobs__list">
+            <li>Наличие автомобиля Lada Largus, либо любой другой автомобиль с посадочными местами для пассажиров от
+              пяти и более.</li>
+            <li>Отличное состояние автомобиля.</li>
+            <li>Опыт вождения от 3х лет. Прописка в г.</li>
+            <li>Краснодар или в городах КМВ.</li>
+            <li>Гарантируем высокую заработную плату, при условии усердия и профессионализма с вашей стороны.</li>
+          </ol>
 
-        <a href="#" class="jobs__button button">Обсудить детали</a>
+          <a href="#" class="jobs__button button">Обсудить детали</a>
+        </div>
+
       </div>
 
     </section>
 
     <section class="faq">
-      <h2 class="faq__title title">Часто задаваемые вопросы</h2>
-      <ul class="faq__list">
-        <!-- аккордеон  -->
-        <li class="faq__accordeon accordeon">
-          <div class="accordeon__question">
-            <p class="accordeon__title">Какие бывают типы бронирования?</p>
-            <svg class="accordeon__icon" xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
-              <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
-            </svg>
-          </div>
+      <div class="wrapper">
+        <h2 class="faq__title title">Часто задаваемые вопросы</h2>
+        <ul class="faq__list">
 
-          <div class="accordeon__answer">
-            <p>Существует два типа подтверждения бронирования:</p>
-            <h3>Мгновенное бронирование.</h3>
-            <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
-              сама автоматически подтверждает бронирование мест(а) в поездке.
-              Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
-              большую гарантию пассажиру в безопасности поездки.</p>
+          <li class="faq__accordeon accordeon active">
 
-            <h3>Обычное бронирование.</h3>
-            <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
-              ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
-              можете отменить поездку.</p>
+            <div class="accordeon__question">
+              <p class="accordeon__title">Какие бывают типы бронирования?</p>
+              <div class="accordeon__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
+                  <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
+                </svg>
+              </div>
+            </div>
 
-            <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
-              предпочтений.</p>
-          </div>
-        </li>
-        <!-- КОНЕЦ аккордеон  -->
-        <!-- аккордеон  -->
-        <li class="faq__accordeon accordeon">
-          <div class="accordeon__question">
-            <p class="accordeon__title">Как связаться с водителем?</p>
-            <svg class="accordeon__icon" xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
-              <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
-            </svg>
-          </div>
+            <div class="accordeon__answer">
+              <p>Существует два типа подтверждения бронирования:</p>
+              <h3>Мгновенное бронирование.</h3>
+              <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
+                сама автоматически подтверждает бронирование мест(а) в поездке.
+                Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
+                большую гарантию пассажиру в безопасности поездки.</p>
 
-          <div class="accordeon__answer">
-            <p>Существует два типа подтверждения бронирования:</p>
-            <h3>Мгновенное бронирование.</h3>
-            <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
-              сама автоматически подтверждает бронирование мест(а) в поездке.
-              Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
-              большую гарантию пассажиру в безопасности поездки.</p>
+              <h3>Обычное бронирование.</h3>
+              <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
+                ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
+                можете отменить поездку.</p>
 
-            <h3>Обычное бронирование.</h3>
-            <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
-              ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
-              можете отменить поездку.</p>
+              <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
+                предпочтений.</p>
+            </div>
+          </li>
+          <li class="faq__accordeon accordeon">
 
-            <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
-              предпочтений.</p>
-          </div>
-        </li>
-        <!-- КОНЕЦ аккордеон  -->
-        <!-- аккордеон  -->
-        <li class="faq__accordeon accordeon">
-          <div class="accordeon__question">
-            <p class="accordeon__title">Почему у меня нет возможности связаться с водителем по телефону?</p>
-            <svg class="accordeon__icon" xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
-              <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
-            </svg>
-          </div>
+            <div class="accordeon__question">
+              <p class="accordeon__title">Какие бывают типы бронирования?</p>
+              <div class="accordeon__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
+                  <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
+                </svg>
+              </div>
+            </div>
 
-          <div class="accordeon__answer">
-            <p>Существует два типа подтверждения бронирования:</p>
-            <h3>Мгновенное бронирование.</h3>
-            <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
-              сама автоматически подтверждает бронирование мест(а) в поездке.
-              Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
-              большую гарантию пассажиру в безопасности поездки.</p>
+            <div class="accordeon__answer">
+              <p>Существует два типа подтверждения бронирования:</p>
+              <h3>Мгновенное бронирование.</h3>
+              <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
+                сама автоматически подтверждает бронирование мест(а) в поездке.
+                Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
+                большую гарантию пассажиру в безопасности поездки.</p>
 
-            <h3>Обычное бронирование.</h3>
-            <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
-              ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
-              можете отменить поездку.</p>
+              <h3>Обычное бронирование.</h3>
+              <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
+                ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
+                можете отменить поездку.</p>
 
-            <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
-              предпочтений.</p>
-          </div>
-        </li>
-        <!-- КОНЕЦ аккордеон  -->
-        <!-- аккордеон  -->
-        <li class="faq__accordeon accordeon">
-          <div class="accordeon__question">
-            <p class="accordeon__title">Сколько времени рассматривают запрос на бронирование?</p>
-            <svg class="accordeon__icon" xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
-              <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
-            </svg>
-          </div>
+              <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
+                предпочтений.</p>
+            </div>
+          </li>
+          <li class="faq__accordeon accordeon">
 
-          <div class="accordeon__answer">
-            <p>Существует два типа подтверждения бронирования:</p>
-            <h3>Мгновенное бронирование.</h3>
-            <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
-              сама автоматически подтверждает бронирование мест(а) в поездке.
-              Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
-              большую гарантию пассажиру в безопасности поездки.</p>
+            <div class="accordeon__question">
+              <p class="accordeon__title">Какие бывают типы бронирования?</p>
+              <div class="accordeon__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
+                  <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
+                </svg>
+              </div>
+            </div>
 
-            <h3>Обычное бронирование.</h3>
-            <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
-              ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
-              можете отменить поездку.</p>
+            <div class="accordeon__answer">
+              <p>Существует два типа подтверждения бронирования:</p>
+              <h3>Мгновенное бронирование.</h3>
+              <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
+                сама автоматически подтверждает бронирование мест(а) в поездке.
+                Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
+                большую гарантию пассажиру в безопасности поездки.</p>
 
-            <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
-              предпочтений.</p>
-          </div>
-        </li>
-        <!-- КОНЕЦ аккордеон  -->
-        <!-- аккордеон  -->
-        <li class="faq__accordeon accordeon">
-          <div class="accordeon__question">
-            <p class="accordeon__title">Почему мои бронирования отклоняют?</p>
-            <svg class="accordeon__icon" xmlns="http://www.w3.org/2000/svg" width="33" height="22" fill="none">
-              <path stroke="#464045" stroke-linecap="round" stroke-width="3" d="m1.5 20 15-17 15 17" />
-            </svg>
-          </div>
+              <h3>Обычное бронирование.</h3>
+              <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
+                ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
+                можете отменить поездку.</p>
 
-          <div class="accordeon__answer">
-            <p>Существует два типа подтверждения бронирования:</p>
-            <h3>Мгновенное бронирование.</h3>
-            <p>Вам не придется дожидаться подтверждения бронирования со стороны водителя. Платформа
-              сама автоматически подтверждает бронирование мест(а) в поездке.
-              Оплата за поездку происходит не только наличным, но и безналичным расчетом. Что дает
-              большую гарантию пассажиру в безопасности поездки.</p>
-
-            <h3>Обычное бронирование.</h3>
-            <p>При обычном бронировании пассажир ожидает подтверждения от водителя на запрос. Время
-              ответа зависит от водителя. Если водитель долго не отвечает на бронирование, то вы
-              можете отменить поездку.</p>
-
-            <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
-              предпочтений.</p>
-          </div>
-        </li>
-        <!-- КОНЕЦ аккордеон  -->
-      </ul>
+              <p>Выберите один из двух методов подтверждения бронирования, в зависимости от ваших
+                предпочтений.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="slider slider--reviews slider-reviews">
@@ -693,6 +759,8 @@
     </div>
 
   </footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>
