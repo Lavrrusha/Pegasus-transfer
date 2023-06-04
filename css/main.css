@@ -307,6 +307,16 @@ body {
   width: 100%;
 }
 
+/* Подвал */
+
+.footer__logotype {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+  grid-template-columns: 2fr 3fr;
+  margin: 40px 0 242px 312px;
+}
+
 .footer__top {
   background-color: #464045;
   color: white;
@@ -315,14 +325,6 @@ body {
 .footer__bottom {
   background-color: #000000;
   color: #ffffff;
-}
-
-
-.lotype__description {
-  display: block;
-  font-size: 16px;
-  line-height: 19px;
-  line-height: 120%;
 }
 
 .social {
