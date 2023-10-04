@@ -273,6 +273,7 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 /*
 .jobs__wrapper {
   background-color: #ffffff;
@@ -309,6 +310,10 @@ body {
 
 /* Подвал */
 
+.footer__container {
+  width: 1920px;
+}
+
 .footer__logotype {
   display: grid;
   gap: 32px;
@@ -317,9 +322,39 @@ body {
   margin: 40px 0 242px 312px;
 }
 
+.footer__navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .footer__top {
+  padding: 40px 0;
+  display: flex;
   background-color: #464045;
   color: white;
+  gap: 32px;
+}
+
+.footer__title {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contacts-list {
+  padding: 0;
+  margin: 0;
+}
+
+.footer__contacts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__social {
+  margin: 0;
+  padding: 0;
 }
 
 .footer__bottom {
@@ -328,6 +363,7 @@ body {
 }
 
 .social {
+  list-style: none;
   display: grid;
   gap: 16px;
   align-items: center;
@@ -335,14 +371,27 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.logotype__description--footer {
+  display: flex;
+  flex-direction: column;
+}
 
 .footer__column {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 304px;
+  gap: 32px;
+}
+
+.footer__text {
+
 }
 
 .footer__promo {
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-column: 16px;
 }
 
 /* меню */
@@ -654,17 +703,16 @@ body {
 
 
 
-.accordeon {
+.accordeon {}
 
-}
-
-.accordeon.active  .accordeon__icon svg {
+.accordeon.active .accordeon__icon svg {
   transform: rotate(180deg);
 }
 
 .accordeon.active .accordeon__question {
   background: #FFB734;
 }
+
 .accordeon.active .accordeon__answer {
   display: block;
 }
